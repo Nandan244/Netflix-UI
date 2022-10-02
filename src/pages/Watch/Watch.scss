@@ -1,0 +1,29 @@
+.watch{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .back{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        color: white;
+        z-index: 2;
+        cursor: pointer;
+
+        .backArrow{
+            margin-right: 5px;
+        }
+        
+    }
+
+    video{
+       
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        
+    }
+}

@@ -1,0 +1,110 @@
+.featured{
+    height: 90vh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    video{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .category{
+        position: absolute;
+        z-index: 99;
+        top: 80px;
+        left: 50px;
+        font-size: 30px;
+        font-weight: 500;
+        color: white;
+        display: flex;
+        align-items: center;
+
+        select{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            width: 150px;
+            background-color: var(--main-color);
+            
+            border-radius: 6.5px;
+            color: white;
+            margin-left: 20px;
+            padding: 5px;
+
+            option{
+                height: 10px;
+                border-radius: 5px;
+                padding: 2.5px;
+                margin: 5px 0px;                
+            }
+        }
+    }
+    .banner{
+        
+        width: 100%;
+    }
+    .info{
+        width: 35%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        bottom: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        flex-direction: column;
+        background: linear-gradient(to right,rgba(0,0,0),transparent);
+
+        img{
+            width: 400px;
+        }
+        .desc{
+            margin: 20px 0px;
+            font-size: 16px;
+        }
+        .buttons{
+            display: flex;
+
+            button{
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 18px;
+                font-weight: 500;
+                margin-right: 10px;
+                cursor: pointer;
+
+                &.play{
+                    background-color: white;
+                    color: var(--main-color);
+                    transition: 0.5s ease-in-out;
+                }
+                &.play:hover{
+                    background-color: rgb(187, 187, 187);
+                }
+                &.more{
+                    background-color: rgb(174, 172, 172);
+                    transition: 0.5s ease-in-out;
+                }
+                &.more:hover{
+                    background-color: gray;
+                }
+                span{
+                    margin-left: 5px;
+                }
+            }
+        }
+
+    }
+}
