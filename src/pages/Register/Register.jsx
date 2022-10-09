@@ -1,7 +1,8 @@
 import { useRef } from "react";
 import { useState } from "react";
 import "./Register.scss";
-
+import { Link } from "react-router-dom";
+import bg from "./bg.jpg";
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,6 +16,7 @@ export default function Register() {
   const handleFinish = () => {
     setPassword(passwordRef.current.value);
   };
+  
   return (
     <div className="register">
       <div className="top">
@@ -24,7 +26,7 @@ export default function Register() {
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/2560px-Netflix_2015_logo.svg.png"
             alt=""
           />
-          <button className="loginButton">Sign In</button>
+          <button style={{"cursor":"pointer"}} className="loginButton"><Link style={{"textDecoration":"none","color":"white"}} to={'/login'}>Sign In</Link></button>
         </div>
       </div>
       <div className="container">
@@ -43,9 +45,13 @@ export default function Register() {
         ) : (
           <form className="input">
             <input type="password" placeholder="password" ref={passwordRef} />
+            
             <button className="registerButton" onClick={handleFinish}>
+            <Link style={{"textDecoration":"none","color":"white"}} to={'/login'}>
               Start
+              </Link>
             </button>
+            
           </form>
         )}
       </div>

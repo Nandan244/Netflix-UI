@@ -4,13 +4,23 @@ import Home from './pages/Home/Home'
 import Movie from './pages/Movie/Movie';
 import Watch from './pages/Watch/Watch';
 import Register from './pages/Register/Register';
-import Login from "./pages/Login/Login"
+import Login from "./pages/Login/Login";
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
 
 function App() {
   return (
     <div>
-      <Login/>
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home/>}/>
+          <Route path='/register' element={<Register/>}  />
+          <Route path="/login" element={<Login/>} />
+          <Route path='/watch' element={<Watch/>} />
+          <Route path='/movie' element={<Movie/>} />
+        </Routes>
+      </Router>
+      
     </div>
   )
 }

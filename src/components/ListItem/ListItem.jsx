@@ -2,6 +2,7 @@ import { Add, PlayArrow, ThumbDownAltOutlined, ThumbUpAltOutlined } from '@mater
 import React, { useState } from 'react';
 import "./ListItem.scss";
 import Trailer from "../../Video/Trailer.mp4"
+import { Link } from 'react-router-dom';
 
 function ListItem({index}) {
 
@@ -16,7 +17,7 @@ function ListItem({index}) {
       <video id='listVideo' autoPlay='true' muted loop><source  src={Trailer} type="video/mp4" /></video>
       <div className='itemInfo'>
         <div className='icons'>
-        <PlayArrow className='icon'/>
+        <Link style={{"textDecoration":"none","color":"white"}} to={'/movie'}><PlayArrow className='icon'/></Link>
         <Add className='icon'/>
         <ThumbUpAltOutlined className='icon'/>
         <ThumbDownAltOutlined className='icon'/>

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Trailer from "../../Video/Banner_trailer.mp4"
 import Title from "./title.png"
 import "./Featured.scss";
+import {Link} from "react-router-dom"
 
 function Featured({type}) {
   const [isHovered,setIsHovered] = useState(false)
@@ -35,7 +36,7 @@ function Featured({type}) {
         <div className='buttons'>
           <button className='play'>
             <PlayArrow/>
-            <span>Play</span>
+            <span><Link style={{"textDecoration":"none","color":"black"}} to={'/movie'}>Play</Link></span>
           </button>
           <button className='more'>
             <InfoOutlined/>
